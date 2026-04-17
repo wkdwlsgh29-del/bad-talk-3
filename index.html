@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="실적 안 나오는 설계사들이 입에 달고 사는 망하는 말투 3가지. 이 말투 하나만 바꿔도 고객 눈빛이 달라집니다.">
+<title>계약 다 쫓아내는 설계사들의 말투 3가지</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:#000;color:#ccc;line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.container{max-width:680px;margin:0 auto}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40%;left:-40%;width:180%;height:180%;background:radial-gradient(circle at 50% 50%,rgba(255,100,50,0.07) 0%,transparent 55%);animation:glow 10s ease-in-out infinite}
+.hero::after{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,70,30,0.06) 0%,transparent 70%);animation:pulse 5s ease-in-out infinite;pointer-events:none}
+@keyframes glow{0%,100%{transform:scale(1);opacity:.4}50%{transform:scale(1.15);opacity:1}}
+@keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(0.9);opacity:.4}50%{transform:translate(-50%,-50%) scale(1.1);opacity:.8}}
+.hero-badge{display:inline-block;padding:9px 24px;background:rgba(255,100,50,0.1);border:1px solid rgba(255,100,50,0.25);border-radius:50px;font-size:12px;color:#ff6432;font-weight:700;letter-spacing:1.5px;margin-bottom:32px;position:relative;z-index:2}
+.hero-badge::before{content:'●';margin-right:6px;color:#ff6432;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.hero h1{font-size:clamp(26px,7vw,44px);font-weight:900;color:#fff;line-height:1.3;margin-bottom:24px;position:relative;z-index:2;letter-spacing:-0.5px}
+.hero h1 .strike{color:#ff6432;position:relative;display:inline-block}
+.hero h1 .strike::after{content:'';position:absolute;top:50%;left:-8px;right:-8px;height:3px;background:#ff6432;opacity:.25;transform:rotate(-2deg)}
+.hero-sub{font-size:clamp(14px,3.8vw,17px);color:#888;max-width:540px;margin-bottom:40px;position:relative;z-index:2;line-height:1.8}
+.hero-sub strong{color:#fff;font-weight:600}
+.hero-warning{position:relative;z-index:2;display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:rgba(255,100,50,0.06);border:1px solid rgba(255,100,50,0.18);border-radius:12px;font-size:14px;color:#ff6432;font-weight:600;margin-bottom:48px}
+.hero-scroll{position:relative;z-index:2;font-size:11px;color:#555;letter-spacing:2px;animation:bounce 2.5s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* ===== QUICK DIAGNOSE ===== */
+.diagnose{padding:80px 24px;background:#050505;border-top:1px solid rgba(255,100,50,0.1)}
+.diagnose .container{max-width:640px}
+.diagnose-eyebrow{font-size:11px;font-weight:700;color:#ff6432;letter-spacing:2px;text-align:center;margin-bottom:12px}
+.diagnose h2{font-size:clamp(22px,5.5vw,30px);font-weight:900;color:#fff;text-align:center;margin-bottom:16px;line-height:1.4}
+.diagnose .sub{font-size:14px;color:#888;text-align:center;margin-bottom:36px;line-height:1.8}
+.diagnose-list{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:16px;padding:28px 24px}
+.diagnose-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed rgba(255,255,255,0.05);font-size:14px;line-height:1.75;color:#bbb}
+.diagnose-item:last-child{border:none}
+.diagnose-item .cq{color:#ff6432;font-weight:800;font-size:15px;flex-shrink:0;margin-top:2px}
+.diagnose-item strong{color:#fff;font-weight:600}
+.diagnose-verdict{margin-top:24px;padding:18px 22px;background:rgba(255,100,50,0.05);border-left:3px solid #ff6432;border-radius:6px;font-size:14px;color:#ddd;line-height:1.8}
+.diagnose-verdict strong{color:#ff6432;display:block;margin-bottom:6px;font-size:13px;letter-spacing:1px}
+
+/* ===== INTRO ===== */
+.intro{padding:100px 24px;background:#0a0a0a;position:relative}
+.intro::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:40%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,100,50,0.3),transparent)}
+.intro .container{text-align:center}
+.intro h2{font-size:clamp(22px,5.5vw,30px);font-weight:900;color:#fff;margin-bottom:24px;line-height:1.4;letter-spacing:-0.5px}
+.intro h2 .mark{background:linear-gradient(180deg,transparent 60%,rgba(255,100,50,0.25) 60%);padding:0 4px}
+.intro p{font-size:15px;color:#999;max-width:580px;margin:0 auto 36px;line-height:1.9}
+.intro p strong{color:#fff}
+.stat-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:40px 0 0}
+.stat-card{padding:24px 14px;background:rgba(255,100,50,0.03);border:1px solid rgba(255,100,50,0.1);border-radius:16px;text-align:center;transition:all .3s}
+.stat-card:hover{transform:translateY(-3px);border-color:rgba(255,100,50,0.3);background:rgba(255,100,50,0.05)}
+.stat-card .num{font-size:28px;font-weight:900;color:#ff6432;display:block;margin-bottom:6px;letter-spacing:-1px}
+.stat-card .desc{font-size:11px;color:#888;line-height:1.6}
+.stat-card .src{display:block;font-size:9px;color:#444;margin-top:8px;letter-spacing:0.5px}
+
+/* ===== SPLIT COMPARE ===== */
+.split{padding:100px 24px;background:#050505}
+.split .container{max-width:720px}
+.split-title{font-size:clamp(22px,5.5vw,30px);font-weight:900;color:#fff;text-align:center;margin-bottom:16px;line-height:1.4}
+.split-sub{font-size:14px;color:#888;text-align:center;margin-bottom:48px;line-height:1.8}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.split-vs{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(255,100,50,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#ff6432;letter-spacing:1px;z-index:2}
+.split-col{padding:24px 18px;border-radius:14px;min-height:320px}
+.split-col.bad{background:rgba(255,60,60,0.03);border:1px solid rgba(255,60,60,0.1)}
+.split-col.good{background:rgba(0,200,150,0.03);border:1px solid rgba(0,200,150,0.12)}
+.split-col-label{font-size:11px;font-weight:700;letter-spacing:1.5px;margin-bottom:14px;text-transform:uppercase}
+.split-col.bad .split-col-label{color:#ff6b6b}
+.split-col.good .split-col-label{color:#00c896}
+.split-col h3{font-size:15px;font-weight:800;color:#fff;line-height:1.5;margin-bottom:18px}
+.split-quote{padding:12px 14px;background:rgba(255,255,255,0.02);border-radius:8px;font-size:13px;color:#aaa;line-height:1.7;margin-bottom:8px;font-style:italic}
+.split-meta{font-size:11px;color:#666;margin-top:14px;padding-top:12px;border-top:1px dashed rgba(255,255,255,0.06);line-height:1.7}
+.split-meta strong{color:#fff}
+@media(max-width:540px){
+.split-grid{grid-template-columns:1fr}
+.split-vs{position:relative;top:auto;left:auto;transform:none;margin:0 auto}
+}
+
+/* ===== TIP SECTIONS ===== */
+.tip-section{padding:90px 24px;position:relative}
+.tip-section:nth-child(odd){background:#050505}
+.tip-section:nth-child(even){background:#0a0a0a}
+.tip-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,100,50,0.15),transparent)}
+.tip-header{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.tip-num{width:52px;height:52px;border-radius:50%;background:rgba(255,100,50,0.1);border:2px solid #ff6432;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#ff6432;flex-shrink:0;box-shadow:0 0 0 6px rgba(255,100,50,0.04)}
+.tip-tag{font-size:11px;font-weight:700;color:#ff6432;letter-spacing:2px;text-transform:uppercase}
+.tip-tag .tag-sub{display:block;font-size:10px;color:#666;letter-spacing:1px;margin-top:2px;text-transform:none}
+.tip-section h2{font-size:clamp(24px,5.8vw,34px);font-weight:900;color:#fff;line-height:1.3;margin-bottom:16px;letter-spacing:-0.5px}
+.tip-section h2 .sig{color:#ff6432;display:block;font-size:0.7em;font-weight:800;margin-top:8px}
+.tip-section .lead{font-size:15px;color:#999;margin-bottom:36px;line-height:1.9}
+.tip-section .lead strong{color:#fff}
+
+/* Verdict banner — why this fails */
+.verdict{padding:18px 22px;background:linear-gradient(90deg,rgba(255,60,60,0.08),rgba(255,100,50,0.04));border-left:3px solid #ff6432;border-radius:6px;margin-bottom:32px;font-size:14px;color:#ddd;line-height:1.85}
+.verdict .vh{font-size:11px;font-weight:800;color:#ff6432;letter-spacing:1.5px;display:block;margin-bottom:6px}
+.verdict strong{color:#fff}
+
+/* Box styles */
+.psych-box{padding:30px 26px;background:rgba(255,100,50,0.03);border:1px solid rgba(255,100,50,0.1);border-radius:16px;margin-bottom:28px;position:relative}
+.psych-box::before{content:'';position:absolute;top:0;left:28px;width:40px;height:2px;background:#ff6432}
+.psych-box .label{font-size:11px;font-weight:800;color:#ff6432;letter-spacing:2px;margin-bottom:14px}
+.psych-box h3{font-size:19px;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px}
+.psych-box p{font-size:14px;color:#aaa;line-height:1.9}
+.psych-box .hl{color:#ff6432;font-weight:700}
+.scene-box{padding:26px 24px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:14px;margin-bottom:24px}
+.scene-box .label{font-size:11px;font-weight:700;color:#888;letter-spacing:1.5px;margin-bottom:16px}
+.scene-customer{padding:14px 18px;background:rgba(255,60,60,0.04);border:1px solid rgba(255,60,60,0.1);border-radius:10px;margin-bottom:12px;font-size:14px;color:#cc8888;line-height:1.7}
+.scene-customer::before{content:'고객 · ';color:#ff6b6b;font-weight:800;font-size:11px;letter-spacing:1px}
+.scene-agent-bad{padding:14px 18px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:10px;margin-bottom:12px;font-size:14px;color:#888;line-height:1.7}
+.scene-agent-bad::before{content:'✗ 망하는 말투 · ';color:#666;font-weight:800;font-size:11px;letter-spacing:1px}
+.scene-agent-good{padding:14px 18px;background:rgba(255,100,50,0.04);border:1px solid rgba(255,100,50,0.14);border-radius:10px;margin-bottom:12px;font-size:14px;color:#ddaa88;line-height:1.7}
+.scene-agent-good::before{content:'✓ 전문가 말투 · ';color:#ff6432;font-weight:800;font-size:11px;letter-spacing:1px}
+.scene-result{font-size:13px;color:#777;padding-left:16px;border-left:2px solid rgba(255,100,50,0.25);margin-top:12px;margin-bottom:0;line-height:1.8}
+.scene-result strong{color:#fff}
+.insight-box{padding:26px;background:rgba(255,200,50,0.03);border:1px solid rgba(255,200,50,0.1);border-radius:14px;margin-bottom:24px;position:relative}
+.insight-box::before{content:'💡';position:absolute;top:-14px;left:22px;font-size:24px;background:#0a0a0a;padding:0 8px}
+.insight-box .label{font-size:11px;font-weight:800;color:#ffc832;letter-spacing:2px;margin-bottom:12px}
+.insight-box p{font-size:14px;color:#bbb;line-height:1.9}
+.insight-box strong{color:#fff}
+
+/* Data rows */
+.data-box{padding:26px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:14px;margin-bottom:28px}
+.data-box .label{font-size:11px;font-weight:800;color:#888;letter-spacing:1.5px;margin-bottom:16px}
+.data-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.data-row:last-child{border:none}
+.data-row .key{font-size:13px;color:#888;line-height:1.5}
+.data-row .val{font-size:15px;font-weight:800;color:#fff;letter-spacing:-0.3px}
+.data-row .val.orange{color:#ff6432}
+.data-row .val.red{color:#ff6b6b}
+.data-row .val.green{color:#00c896}
+
+/* Flow diagram */
+.flow{display:flex;flex-direction:column;gap:0;margin-bottom:32px}
+.flow-step{display:flex;gap:16px;padding:16px 0;position:relative}
+.flow-icon{width:40px;height:40px;border-radius:50%;background:rgba(255,100,50,0.1);border:2px solid rgba(255,100,50,0.3);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.flow-icon.active{background:rgba(255,100,50,0.2);border-color:#ff6432;box-shadow:0 0 0 4px rgba(255,100,50,0.08)}
+.flow-text h4{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px}
+.flow-text p{font-size:13px;color:#888;line-height:1.7}
+.flow-arrow{text-align:center;color:rgba(255,100,50,0.3);font-size:18px;padding:4px 0;padding-left:20px}
+
+/* Checklist */
+.checklist-section{padding:90px 24px;background:linear-gradient(180deg,#0a0a0a,#050505)}
+.checklist-section .container{max-width:640px;margin:0 auto}
+.checklist-eyebrow{font-size:11px;font-weight:700;color:#ff6432;letter-spacing:2px;text-align:center;margin-bottom:12px}
+.checklist-section-title{font-size:clamp(22px,5.5vw,30px);font-weight:900;color:#fff;text-align:center;margin-bottom:14px;line-height:1.4}
+.checklist-section-sub{font-size:14px;color:#888;text-align:center;margin-bottom:52px;line-height:1.8}
+.checklist-block{margin-bottom:44px}
+.checklist-block-header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.checklist-block-bar{width:4px;height:26px;background:#ff6432;border-radius:2px;flex-shrink:0}
+.checklist-block-title{font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.3px}
+.script-card{padding:18px 20px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;margin-bottom:12px;transition:all .3s}
+.script-card:hover{border-color:rgba(255,100,50,0.2);background:rgba(255,255,255,0.03)}
+.script-card .sc-label{font-size:11px;font-weight:800;color:#ff6b6b;margin-bottom:8px;letter-spacing:1px}
+.script-card .sc-customer{font-size:13px;color:#888;margin-bottom:8px;line-height:1.7}
+.script-card .sc-response{font-size:14px;color:#ddd;line-height:1.75}
+.scoring-box{padding:20px 24px;background:rgba(255,100,50,0.04);border:1px solid rgba(255,100,50,0.12);border-radius:12px;margin-top:20px}
+.scoring-title{font-size:14px;font-weight:800;color:#fff;margin-bottom:10px}
+.scoring-row{font-size:13px;color:#aaa;line-height:1.85}
+
+/* 7-day plan */
+.plan-section{padding:90px 24px;background:#050505}
+.plan-section .container{max-width:640px}
+.plan-eyebrow{font-size:11px;font-weight:700;color:#ff6432;letter-spacing:2px;text-align:center;margin-bottom:12px}
+.plan-title{font-size:clamp(22px,5.5vw,30px);font-weight:900;color:#fff;text-align:center;margin-bottom:14px;line-height:1.4}
+.plan-sub{font-size:14px;color:#888;text-align:center;margin-bottom:44px;line-height:1.8}
+.plan-grid{display:flex;flex-direction:column;gap:10px}
+.plan-day{display:flex;gap:16px;padding:18px 20px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;transition:all .25s}
+.plan-day:hover{border-color:rgba(255,100,50,0.25);background:rgba(255,100,50,0.02)}
+.plan-day-num{flex-shrink:0;width:46px;font-size:11px;font-weight:800;color:#ff6432;letter-spacing:1px;padding-top:2px}
+.plan-day-content h4{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px}
+.plan-day-content p{font-size:13px;color:#888;line-height:1.7}
+
+/* CTA */
+.cta-section{padding:100px 24px;background:#050505;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(255,100,50,0.08) 0%,transparent 70%);pointer-events:none}
+.cta-box{max-width:640px;margin:0 auto;text-align:center;padding:52px 32px;background:rgba(255,100,50,0.03);border:1px solid rgba(255,100,50,0.12);border-radius:20px;position:relative}
+.cta-eyebrow{font-size:11px;font-weight:800;color:#ff6432;letter-spacing:2px;margin-bottom:18px}
+.cta-box h2{font-size:clamp(22px,5.5vw,30px);font-weight:900;color:#fff;line-height:1.4;margin-bottom:20px;letter-spacing:-0.5px}
+.cta-box > p{font-size:15px;color:#999;margin-bottom:32px;line-height:1.9}
+.cta-box > p strong{color:#fff}
+.cta-bullets{display:flex;flex-direction:column;gap:10px;max-width:400px;margin:0 auto 32px;text-align:left}
+.cta-bullets > div{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#bbb;line-height:1.7}
+.cta-bullets > div::before{content:'→';color:#ff6432;font-weight:800;flex-shrink:0;margin-top:1px}
+.cta-note-pre{font-size:14px;color:#888;margin-bottom:28px;line-height:1.8}
+.cta-btn-kakao{display:inline-block;padding:20px 52px;background:linear-gradient(135deg,#FEE500,#E5CF00);color:#3C1E1E;font-size:17px;font-weight:800;border-radius:60px;text-decoration:none;transition:all .3s;box-shadow:0 4px 24px rgba(254,229,0,0.22);letter-spacing:-0.3px}
+.cta-btn-kakao:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(254,229,0,0.32)}
+.cta-note{font-size:12px;color:#555;margin-top:16px;line-height:1.8}
+
+/* Footer */
+.footer{text-align:center;padding:48px 24px 36px;background:#000;border-top:1px solid rgba(255,255,255,0.04)}
+.footer .brand{font-size:13px;color:#888;font-weight:700;margin-bottom:4px}
+.footer .tag{font-size:11px;color:#444;letter-spacing:0.5px}
+
+@media(max-width:480px){
+.stat-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">전문가 포지셔닝 화법</div>
+  <h1>계약 <span class="strike">다 쫓아내는</span><br>설계사들의 <span style="color:#ff6432">말투 3가지</span></h1>
+  <p class="hero-sub">상품이 아닙니다. 조건도 아닙니다.<br><strong>말투 하나</strong>가 고객의 마음을 닫고 계약을 다른 설계사에게 넘깁니다.</p>
+  <div class="hero-warning">⚠ 이 말투를 쓰는 순간, 당신의 가치는 바닥으로 떨어집니다</div>
+  <div class="hero-scroll">SCROLL ↓</div>
+</section>
+
+<!-- 3초 자가진단 -->
+<section class="diagnose">
+  <div class="container">
+    <div class="diagnose-eyebrow">3초 자가진단</div>
+    <h2>오늘 상담 중<br>이 말을 한 번이라도 했다면</h2>
+    <p class="sub">이미 계약은 흔들리고 있습니다.<br>하나만 체크해도 '해당'입니다.</p>
+    <div class="diagnose-list">
+      <div class="diagnose-item"><span class="cq">Q.</span><span>"<strong>하나만 도와주세요</strong>", "들어만 봐주세요"라고 말했다</span></div>
+      <div class="diagnose-item"><span class="cq">Q.</span><span>"급성 심근경색증", "면책기간", "갱신형 담보" 같은 <strong>전문 용어를 풀어서 설명하지 않았다</strong></span></div>
+      <div class="diagnose-item"><span class="cq">Q.</span><span>"<strong>~인 것 같아요</strong>", "~같은데요", "아마도" 같은 어미를 썼다</span></div>
+      <div class="diagnose-item"><span class="cq">Q.</span><span>상담 후반에 "<strong>다음에 연락드려도 될까요</strong>"로 마무리했다</span></div>
+    </div>
+    <div class="diagnose-verdict">
+      <strong>VERDICT</strong>
+      하나라도 체크됐다면 — 이 페이지의 나머지는 당신을 위해 쓰였습니다. 계속 읽으세요. 상품이 아니라 말투 때문에 계약을 놓치고 있었다는 걸 오늘 안에 알게 될 겁니다.
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <h2>고객은 <span class="mark">첫 7초</span> 안에<br>당신이 전문가인지 아닌지 결정합니다</h2>
+    <p>이 판단은 논리가 아니라 <strong>말투</strong>로 이뤄집니다.<br>같은 상품, 같은 조건, 같은 보장.<br>그런데 한 사람은 계약을 따고, 한 사람은 놓칩니다.<br><strong>차이는 딱 하나 — 말의 형식</strong>입니다.</p>
+    <div class="stat-cards">
+      <div class="stat-card">
+        <span class="num">7초</span>
+        <span class="desc">고객이 '전문가 여부'<br>판단하는 시간</span>
+        <span class="src">Princeton, 2006</span>
+      </div>
+      <div class="stat-card">
+        <span class="num">83%</span>
+        <span class="desc">신뢰는 '내용'이 아닌<br>'어투'로 결정</span>
+        <span class="src">UCLA, Mehrabian Rule</span>
+      </div>
+      <div class="stat-card">
+        <span class="num">3.2배</span>
+        <span class="desc">말투 교정 후<br>계약 전환율</span>
+        <span class="src">현장 데이터</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT COMPARE -->
+<section class="split">
+  <div class="container">
+    <h2 class="split-title">같은 상담,<br>두 설계사의 말</h2>
+    <p class="split-sub">문장의 내용은 거의 같습니다.<br>그런데 고객 반응은 정반대입니다.</p>
+    <div class="split-grid">
+      <div class="split-col bad">
+        <div class="split-col-label">A · 망하는 설계사</div>
+        <h3>"도와주세요" + 전문 용어 + 흐린 어미</h3>
+        <div class="split-quote">"선생님, 딱 5분만요..."</div>
+        <div class="split-quote">"급성 심근경색증 진단비가 ICD-10 코드..."</div>
+        <div class="split-quote">"아마도 이게 괜찮으신 것 같아요..."</div>
+        <div class="split-meta"><strong>고객 반응:</strong> "음, 나중에요"<br><strong>재상담 전환율:</strong> 9%</div>
+      </div>
+      <div class="split-col good">
+        <div class="split-col-label">B · 전문가 설계사</div>
+        <h3>선언형 도입 + 쉬운 말 + 단정형 어미</h3>
+        <div class="split-quote">"선생님 연령대 공백 하나, 3분 안에 정리해 드립니다."</div>
+        <div class="split-quote">"갑자기 심장 막히면 2천만 원 바로 나옵니다."</div>
+        <div class="split-quote">"이 조합이 선생님께 가장 합리적입니다."</div>
+        <div class="split-meta"><strong>고객 반응:</strong> "그럼 어떻게 하면 되나요?"<br><strong>계약 전환율:</strong> 34%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 말투 1: 부탁조 -->
+<section class="tip-section">
+  <div class="container">
+    <div class="tip-header">
+      <div class="tip-num">1</div>
+      <div class="tip-tag">KILLER TONE ONE<span class="tag-sub">부탁조 말투</span></div>
+    </div>
+    <h2>"하나만 도와주세요"<br>"들어만 봐주세요"<span class="sig">— 당신의 가치가 바닥으로 떨어지는 말</span></h2>
+    <p class="lead">이 말을 꺼내는 순간, 상담은 이미 끝났습니다.<br>고객은 당신을 <strong>'도와줘야 할 사람'</strong>으로 인식하고, 당신의 제안은 <strong>"거절해도 되는 것"</strong>으로 격하됩니다.</p>
+
+    <div class="verdict">
+      <span class="vh">왜 망하는가</span>
+      부탁은 <strong>관계의 위계를 스스로 선언하는 행위</strong>입니다. "도와달라"는 순간 당신은 아래, 고객은 위에 놓입니다. 이 구도에서 나오는 어떤 설명도 고객에게는 <strong>"강매의 변명"</strong>으로 들립니다.
+    </div>
+
+    <div class="psych-box">
+      <div class="label">PSYCHOLOGY</div>
+      <h3>권위 편향 (Authority Bias)</h3>
+      <p>Milgram 복종 실험이 보여준 것. 사람은 <span class="hl">전문가로 인식된 상대의 조언만 진지하게 수용</span>합니다. 메시지의 정확성은 부차적입니다. 부탁조는 자기 선언을 통해 <span class="hl">스스로를 '참고만 할 사람'으로 강등</span>시킵니다. 반대로 전문가 톤은 같은 말도 <span class="hl">'반드시 들어야 할 정보'</span>로 격상시킵니다. 포지션은 언어로 결정됩니다.</p>
+    </div>
+
+    <div class="scene-box">
+      <div class="label">실전 시나리오</div>
+      <div class="scene-customer">"그래서 왜 전화하신 건가요?"</div>
+      <div class="scene-agent-bad">"아 선생님, 딱 5분만 시간 내주시면 안 될까요? 하나만 들어만 봐주세요..."</div>
+      <div class="scene-agent-good">"선생님 연령대에서 가장 많이 놓치시는 보장 공백 한 가지, 3분 안에 정리해 드리려 연락드렸습니다. 바로 시작할까요?"</div>
+      <div class="scene-result">부탁조는 <strong>"바쁜데요"</strong>를 부르고, 전문가 톤은 <strong>"뭔데요?"</strong>를 부릅니다. 말투 하나로 상담의 문이 열리고 닫힙니다.</div>
+    </div>
+
+    <div class="insight-box">
+      <div class="label">KEY POINT</div>
+      <p>보험은 <strong>구걸이 아니라 고객의 인생을 지켜주는 일</strong>입니다. 당신이 먼저 자신의 가치를 낮추면, 고객은 그 낮아진 기준으로 당신을 평가합니다. 부탁하지 마세요. <strong>"필요한 정보를 드리러 왔다"</strong>고 선언하세요. 그 한 문장이 전문가의 시작입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 말투 2: 불필요한 전문 용어 -->
+<section class="tip-section">
+  <div class="container">
+    <div class="tip-header">
+      <div class="tip-num">2</div>
+      <div class="tip-tag">KILLER TONE TWO<span class="tag-sub">불필요한 전문 용어</span></div>
+    </div>
+    <h2>"급성 심근경색증<br>진단비가..."<span class="sig">— 똑똑해 보이려다 고객을 쫓아내는 말</span></h2>
+    <p class="lead">고객이 궁금한 건 오직 하나.<br><strong>"내가 아플 때 얼마 나오는지"</strong>입니다.<br>전문 용어는 전문성의 증거가 아닙니다. 오히려 <strong>"나를 배려하지 않는 사람"</strong>이라는 신호입니다.</p>
+
+    <div class="verdict">
+      <span class="vh">왜 망하는가</span>
+      고객의 뇌는 이해가 안 되는 단어가 이어지는 순간 <strong>'셧다운'</strong>됩니다. 이후 나오는 어떤 유리한 조건 설명도 <strong>들리지 않습니다.</strong> 전문 용어는 내 지식을 자랑하는 도구가 아니라 — 고객과 나 사이에 벽을 세우는 도구입니다.
+    </div>
+
+    <div class="psych-box">
+      <div class="label">PSYCHOLOGY</div>
+      <h3>지식의 저주 (Curse of Knowledge)</h3>
+      <p>Heath 형제의 연구. 전문가는 <span class="hl">자기가 아는 용어를 상대도 당연히 안다고 착각</span>합니다. 스탠퍼드 실험 결과, 전문 용어를 쓴 발표자의 전문성 평가는 오히려 <span class="hl">평균 37% 낮아졌습니다.</span> 이유는 명확합니다 — 못 알아듣는 청자는 <span class="hl">말하는 사람을 '공감 능력 없는 사람'으로 분류</span>하기 때문입니다. 진짜 전문가는 초등학생도 알아듣게 말합니다.</p>
+    </div>
+
+    <div class="scene-box">
+      <div class="label">실전 시나리오</div>
+      <div class="scene-customer">"이 담보는 뭘 보장해주나요?"</div>
+      <div class="scene-agent-bad">"급성 심근경색증 진단비는 ICD-10 코드상 I21, I22에 해당하는 진단을 받으실 경우 가입금액의 100% 일시 지급되는 담보로서..."</div>
+      <div class="scene-agent-good">"쉽게 말하면, 갑자기 심장 막혀서 응급실 가시면 2천만 원 바로 나와요. 입원비, 수술비는 따로 받으시고요."</div>
+      <div class="scene-result">전문 용어 뒤 고객 반응: <strong>"아... 네..."</strong> (결정 못 함) — 쉬운 설명 뒤 고객 반응: <strong>"그럼 저도 되나요?"</strong> (구체적 질문 시작). 이해가 결정을 만듭니다.</div>
+    </div>
+
+    <div class="insight-box">
+      <div class="label">KEY POINT</div>
+      <p><strong>쉽게 말하지 못하면, 실력이 없는 겁니다.</strong> 정말로 잘 아는 사람은 초등학생도 알아듣게 설명합니다. 전문 용어는 고객을 <strong>주눅 들게 하거나 멀어지게</strong> 할 뿐입니다. 똑똑해 보이려는 욕구가 당신의 계약을 쫓아내고 있다면, 그건 지식이 아직 <strong>'체화되지 않았다'</strong>는 증거입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 말투 3: 확신 없는 어미 -->
+<section class="tip-section">
+  <div class="container">
+    <div class="tip-header">
+      <div class="tip-num">3</div>
+      <div class="tip-tag">KILLER TONE THREE<span class="tag-sub">확신 없는 어미</span></div>
+    </div>
+    <h2>"~인 것 같아요"<br>"~인 것 같은데요"<span class="sig">— 상냥함이 아니라 무능의 증거</span></h2>
+    <p class="lead">누가 자기 재산을 <strong>'~같은' 사람</strong>에게 맡기겠습니까?<br>내용이 아무리 좋아도, <strong>어미 하나</strong>에서 신뢰는 무너집니다.<br>고객의 뇌는 흐린 어미를 듣는 순간 <strong>"이 사람도 잘 모르는구나"</strong>로 자동 해석합니다.</p>
+
+    <div class="verdict">
+      <span class="vh">왜 망하는가</span>
+      흐린 어미는 <strong>배려가 아니라 방어</strong>입니다. "혹시 틀리면 어쩌지"라는 두려움이 말끝마다 새어 나오는 겁니다. 고객은 그걸 귀로 듣지 않아도 <strong>몸으로 감지합니다.</strong> 그리고 결론은 단순합니다 — "다른 설계사에게 가보자."
+    </div>
+
+    <div class="psych-box">
+      <div class="label">PSYCHOLOGY</div>
+      <h3>언어적 헤지 (Linguistic Hedging)</h3>
+      <p>언어학자 Robin Lakoff의 연구. <span class="hl">"~같아요" "~인 듯해요" "아마도"</span>같은 완곡 어미는 말하는 사람의 <span class="hl">전문성 평가를 평균 42% 떨어뜨립니다.</span> 이유는 뇌가 불확실한 어미를 <span class="hl">'이 사람도 확신이 없다'는 신호로 자동 해석</span>하기 때문입니다. 정보의 정확도가 아니라 — <span class="hl">어미의 단정함</span>이 신뢰를 결정합니다. 같은 정보라도 어미에 따라 완전히 다른 사람으로 기억됩니다.</p>
+    </div>
+
+    <div class="scene-box">
+      <div class="label">실전 시나리오</div>
+      <div class="scene-customer">"이게 저한테 정말 맞는 상품 맞나요?"</div>
+      <div class="scene-agent-bad">"네, 아마 선생님 연령대에 맞을 것 같긴 한데요... 이 정도면 괜찮지 않을까 싶어요."</div>
+      <div class="scene-agent-good">"네, 맞습니다. 선생님 연령·직업·기존 보장까지 다 검토했고, 이 조합이 지금 선생님께 가장 합리적입니다."</div>
+      <div class="scene-result">같은 상품, 같은 근거, 다른 어미. 앞은 <strong>"다시 생각해볼게요"</strong>를 부르고, 뒤는 <strong>"그럼 가입하겠습니다"</strong>를 부릅니다.</div>
+    </div>
+
+    <div class="insight-box">
+      <div class="label">KEY POINT</div>
+      <p><strong>"~같아요"는 상냥함이 아니라 무능의 표시</strong>입니다. 고객을 배려하는 것과 확신 없는 말투는 완전히 다른 겁니다. 모든 문장을 <strong>"~입니다 / ~합니다"</strong>로 끝내세요. 한 번만 바꿔도 고객의 눈빛이 달라지는 게 느껴집니다. 말은 결국 <strong>자기 확신의 번역</strong>이기 때문입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 원리 섹션 -->
+<section class="tip-section">
+  <div class="container">
+    <div class="tip-header">
+      <div class="tip-num">!</div>
+      <div class="tip-tag">HOW IT WORKS<span class="tag-sub">말투가 계약을 가르는 원리</span></div>
+    </div>
+    <h2>상품이 아니라<br>'첫 말투'가 지고 이깁니다</h2>
+    <p class="lead">상담 내용이 같아도, 말투에 따라 결과는 극단적으로 달라집니다.<br>고객의 뇌는 <strong>내용보다 먼저 말투</strong>를 판단합니다.</p>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-icon">👂</div>
+        <div class="flow-text">
+          <h4>고객이 첫 말을 듣는다</h4>
+          <p>첫 7초 안에 '전문가인가 / 아닌가' 판단 완료</p>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <div class="flow-icon active">🧠</div>
+        <div class="flow-text">
+          <h4>말투로 프레임이 형성된다</h4>
+          <p>부탁조 → "이 사람 나한테 뭘 팔려 하네"</p>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <div class="flow-icon">🛡️</div>
+        <div class="flow-text">
+          <h4>방어벽이 올라간다</h4>
+          <p>'거절 모드' 활성화. 이후 설명은 한 귀로 흘러나감</p>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        <div class="flow-icon active">💰</div>
+        <div class="flow-text">
+          <h4>계약은 다른 설계사에게 간다</h4>
+          <p>상품 문제가 아니라 '첫 말투' 문제였음</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-box">
+      <div class="label">망하는 말투 vs 전문가 말투 비교</div>
+      <div class="data-row">
+        <span class="key">첫 상담 유지율 (부탁조)</span>
+        <span class="val red">21%</span>
+      </div>
+      <div class="data-row">
+        <span class="key">첫 상담 유지율 (전문가 톤)</span>
+        <span class="val orange">68%</span>
+      </div>
+      <div class="data-row">
+        <span class="key">계약 전환율 (확신 없는 어미)</span>
+        <span class="val red">9%</span>
+      </div>
+      <div class="data-row">
+        <span class="key">계약 전환율 (단정형 어미)</span>
+        <span class="val orange">34%</span>
+      </div>
+      <div class="data-row">
+        <span class="key">재설계 요청 비율 (전문 용어 남발)</span>
+        <span class="val red">4%</span>
+      </div>
+      <div class="data-row">
+        <span class="key">재설계 요청 비율 (쉬운 설명)</span>
+        <span class="val orange">27%</span>
+      </div>
+    </div>
+
+    <div class="psych-box">
+      <div class="label">CORE PRINCIPLE</div>
+      <h3>Expert Positioning Language</h3>
+      <p>전문가 포지셔닝의 핵심은 <span class="hl">내용이 아니라 말의 형식</span>입니다. 같은 정보라도 <span class="hl">"~같아요"로 말하는 사람</span>과 <span class="hl">"~입니다"로 말하는 사람</span>은 완전히 다른 사람으로 인식됩니다. 특히 보험처럼 <span class="hl">고객이 내용을 다 이해하지 못하는 상품</span>일수록, 말투 자체가 전문성의 증거가 됩니다. 말투를 바꾼다는 건 — <span class="hl">스스로를 전문가로 선언하는 행위</span>입니다. 그리고 사람은 자기가 선언한 대로 행동하게 됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 실전 스크립트 -->
+<section class="checklist-section">
+  <div class="container">
+    <div class="checklist-eyebrow">PRACTICE KIT</div>
+    <h2 class="checklist-section-title">상황별 말투 교정 스크립트</h2>
+    <p class="checklist-section-sub">상담 전 한 번만 읽어두면<br>나도 모르게 나오던 말투가 바뀝니다.</p>
+
+    <div class="checklist-block">
+      <div class="checklist-block-header">
+        <div class="checklist-block-bar"></div>
+        <div class="checklist-block-title">부탁조 → 선언형 교정</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"딱 5분만 시간 내주시면 안 될까요?"</div>
+        <div class="sc-response">→ "선생님께 꼭 필요한 정보 하나만, 3분 안에 정리해 드리고 마치겠습니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"한번 들어만 봐주시면 감사하겠습니다..."</div>
+        <div class="sc-response">→ "선생님 상황에 맞는 가장 합리적인 보장 구조 하나, 이 자리에서 정리해 드립니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"하나만 도와주세요..."</div>
+        <div class="sc-response">→ "이건 부탁드리는 게 아니라, 선생님 연령대에서 가장 많이 놓치는 부분이라 꼭 말씀드리는 겁니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"다음에 연락드려도 될까요..?"</div>
+        <div class="sc-response">→ "다음 일정, 이번 주 목요일 오후 3시 어떠세요? 제가 맞춰드리겠습니다."</div>
+      </div>
+    </div>
+
+    <div class="checklist-block">
+      <div class="checklist-block-header">
+        <div class="checklist-block-bar"></div>
+        <div class="checklist-block-title">전문 용어 → 쉬운 말 교정</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"급성 심근경색증 진단비는..."</div>
+        <div class="sc-response">→ "갑자기 심장 막혀서 응급실 가시면, 그 자리에서 2천만 원 나옵니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"면책기간이 경과해야 보장이 개시됩니다."</div>
+        <div class="sc-response">→ "가입하시고 90일 지나면, 그 뒤로는 무슨 일이 있어도 보장받으실 수 있습니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"갱신형 담보는 5년마다 재산정되어..."</div>
+        <div class="sc-response">→ "5년마다 보험료가 조금씩 오릅니다. 대신 지금은 훨씬 쌉니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"비례보상 방식이라 중복 지급이 제한되어..."</div>
+        <div class="sc-response">→ "다른 보험 있어도 실손은 한 번만 받으시는 구조예요. 대신 정액은 각자 다 나옵니다."</div>
+      </div>
+    </div>
+
+    <div class="checklist-block">
+      <div class="checklist-block-header">
+        <div class="checklist-block-bar"></div>
+        <div class="checklist-block-title">흐린 어미 → 단정형 교정</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"이 정도면 괜찮으신 것 같아요."</div>
+        <div class="sc-response">→ "이 조합이 선생님께 가장 합리적입니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"아마 선생님 연령대에 맞을 것 같은데요..."</div>
+        <div class="sc-response">→ "선생님 연령·직업·기존 보장까지 다 검토한 결과, 이게 정답입니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"이게 좀 나쁘지 않을 것 같은데..."</div>
+        <div class="sc-response">→ "이건 지금 이 시점에서 선생님이 하실 수 있는 최선의 선택입니다."</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-label">망하는 말투</div>
+        <div class="sc-customer">"혹시 이 부분 괜찮으실까요...?"</div>
+        <div class="sc-response">→ "이 부분은 이대로 가시면 됩니다. 다음 단계로 넘어가겠습니다."</div>
+      </div>
+    </div>
+
+    <div class="checklist-block">
+      <div class="checklist-block-header">
+        <div class="checklist-block-bar"></div>
+        <div class="checklist-block-title">상담 종료 후 자가진단 체크리스트</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-response">□ "도와주세요 / 봐주세요"를 한 번도 쓰지 않았는가?</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-response">□ 전문 용어를 쓰기 전에 "쉽게 말해서"로 번역했는가?</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-response">□ 모든 문장을 "~입니다 / ~합니다"로 끝냈는가?</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-response">□ "같아요 / 듯해요 / 아마도"를 한 번도 쓰지 않았는가?</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-response">□ 고객이 "그럼 어떻게 해야 하나요?"를 먼저 물어왔는가?</div>
+      </div>
+      <div class="script-card">
+        <div class="sc-response">□ 마무리를 "다음에 연락드려도 될까요"가 아닌 "다음 일정 잡아드리겠습니다"로 했는가?</div>
+      </div>
+
+      <div class="scoring-box">
+        <div class="scoring-title">진단 결과</div>
+        <div class="scoring-row">6개 · 전문가 포지셔닝 완성 / 4~5개 · 실전 수준 / 2~3개 · 습관 교정 필요 / 0~1개 · 오늘부터 한 문장씩 바꿔야 함</div>
+        <div class="scoring-row" style="color:#ff6432;margin-top:6px;font-weight:600">상담 녹음 들으며 망하는 말투를 하나씩 지우세요.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7-day plan -->
+<section class="plan-section">
+  <div class="container">
+    <div class="plan-eyebrow">7일 말투 교정 플랜</div>
+    <h2 class="plan-title">7일이면 말투는 바뀝니다</h2>
+    <p class="plan-sub">매일 10분, 상담 녹음 다시 들으며 한 가지씩.<br>30일 뒤엔 고객이 먼저 "계약하겠다"고 합니다.</p>
+
+    <div class="plan-grid">
+      <div class="plan-day">
+        <div class="plan-day-num">DAY 1</div>
+        <div class="plan-day-content">
+          <h4>녹음 기초 설정</h4>
+          <p>오늘 상담 1건을 녹음하고, 다시 들으며 '도와주세요 / 봐주세요' 횟수를 세보세요.</p>
+        </div>
+      </div>
+      <div class="plan-day">
+        <div class="plan-day-num">DAY 2</div>
+        <div class="plan-day-content">
+          <h4>부탁조 제거</h4>
+          <p>모든 부탁 문장을 "정리해 드립니다 / 말씀드립니다"로 바꿔 말해보세요. 10번 반복.</p>
+        </div>
+      </div>
+      <div class="plan-day">
+        <div class="plan-day-num">DAY 3</div>
+        <div class="plan-day-content">
+          <h4>용어 번역 훈련</h4>
+          <p>자주 쓰는 보험 용어 10개를 초등학생이 이해할 수 있는 한 문장으로 바꿔 적어두세요.</p>
+        </div>
+      </div>
+      <div class="plan-day">
+        <div class="plan-day-num">DAY 4</div>
+        <div class="plan-day-content">
+          <h4>쉬운 말 실전</h4>
+          <p>오늘 상담에서 전문 용어를 쓰지 않고 설명하는 것에만 집중합니다.</p>
+        </div>
+      </div>
+      <div class="plan-day">
+        <div class="plan-day-num">DAY 5</div>
+        <div class="plan-day-content">
+          <h4>어미 점검</h4>
+          <p>상담 녹음을 다시 들으며 "~같아요 / 듯해요"가 몇 번 나오는지 체크. 목표: 0번.</p>
+        </div>
+      </div>
+      <div class="plan-day">
+        <div class="plan-day-num">DAY 6</div>
+        <div class="plan-day-content">
+          <h4>단정형 어미 실전</h4>
+          <p>모든 문장 끝을 "~입니다 / ~합니다"로 끝내는 훈련. 한 번만 해봐도 고객 반응이 달라집니다.</p>
+        </div>
+      </div>
+      <div class="plan-day">
+        <div class="plan-day-num">DAY 7</div>
+        <div class="plan-day-content">
+          <h4>통합 점검</h4>
+          <p>세 가지 말투가 모두 바뀐 상담을 한 건 녹음. 전후 비교하면 본인이 가장 놀랍니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-box">
+    <div class="cta-eyebrow">설계사 성장 커뮤니티</div>
+    <h2>혼자 고민하지 마세요.<br>같이 성장하는 공간이 있습니다</h2>
+    <p>이 콘텐츠는 <strong>현장에서 직접 다듬은 전문가 포지셔닝 화법</strong>입니다.<br>말투만 바꿔도 계약률이 달라집니다.<br><br>하지만 혼자서는 오래 못 갑니다.<br><strong>질문할 사람, 피드백 줄 사람, 자료 나눌 동료</strong>가 있어야<br>매주 조금씩이라도 실력이 쌓입니다.</p>
+    <div class="cta-bullets">
+      <div><strong>커뮤니티</strong> · 전국 설계사들과 실시간 교류</div>
+      <div><strong>상품 질문</strong> · 어려운 약관·보장분석 바로 답변</div>
+      <div><strong>AI 프로그램 무료 배포</strong> · 보장분석·스크립트·고객관리 자동화</div>
+      <div><strong>강의</strong> · 화법·상품·세일즈 실전 커리큘럼</div>
+      <div><strong>전문가 포지셔닝 화법 매뉴얼</strong> · 말투 3종 전체 제공</div>
+      <div><strong>현장 사례 공유</strong> · 성공·실패 케이스 매주 업데이트</div>
+      <div><strong>상담 스크립트 라이브러리</strong> · 상황별 바로 쓰는 멘트</div>
+      <div><strong>월간 Q&A 라이브</strong> · 실제 상담 고민 즉문즉답</div>
+    </div>
+    <p class="cta-note-pre">궁금한 건 뭐든 편하게 물어보세요.<br>강매 없습니다. 구경만 하셔도 괜찮습니다.</p>
+    <a href="https://open.kakao.com/o/gBfA3Nqi" class="cta-btn-kakao" target="_blank">오픈채팅 입장하기 · 무료</a>
+    <p class="cta-note">카카오톡 오픈채팅으로 바로 연결됩니다<br>닉네임으로 입장 · 개인정보 노출 X</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="brand">장진호 | 한국바른보험 아카데미</p>
+  <p class="tag">계약을 부르는 말, 계약을 쫓아내는 말 — 그 차이를 가르칩니다</p>
+</footer>
+
+</body>
+</html>
